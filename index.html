@@ -235,6 +235,10 @@ footer{padding:30px 16px 50px;text-align:center;font-size:13px;opacity:.55}
 #film video{width:100%;height:100%;object-fit:contain;background:#000}
 #film .bar{position:absolute;top:12px;left:12px;right:12px;display:flex;justify-content:space-between;align-items:center;gap:10px;pointer-events:none}
 #film .tag{font-family:var(--head);background:var(--red);color:#fff;padding:4px 12px;letter-spacing:.08em;font-size:15px}
+/* téléphone tenu droit : le film pivote pour prendre tout l'écran (on tourne le téléphone) */
+@media (orientation:portrait) and (max-width:700px){
+  #film{inset:auto;top:50%;left:50%;width:100vh;width:100dvh;height:100vw;transform:translate(-50%,-50%) rotate(90deg)}
+}
 #filmSkip{pointer-events:auto;font-family:var(--head);font-size:16px;background:rgba(255,255,255,.15);color:#fff;border:2px solid rgba(255,255,255,.4);border-radius:6px;padding:6px 14px}
 
 /* ===== effets ===== */
@@ -254,6 +258,35 @@ footer{padding:30px 16px 50px;text-align:center;font-size:13px;opacity:.55}
   .card .nm{font-size:12px}
   .podium{max-width:420px}
   section{padding:60px 0}
+}
+@media (max-width:600px){
+  section{padding:48px 0}
+  .h2{margin:10px 0 8px}
+  .lead{font-size:16px}
+  .row .btn,.controls .btn{flex:1 1 100%;text-align:center;font-size:19px;padding:13px 16px}
+  .paper{min-height:0;padding:20px 18px;font-size:16px}
+  .hud{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:18px 0 12px}
+  .hud .chip{border-radius:10px;padding:6px 4px;font-size:11px;text-align:center;line-height:1.2}
+  .hud .chip b{display:block;margin:2px 0 0;font-size:18px}
+  .hud .chip.debt{grid-column:1/-1}
+  .controls{gap:8px}
+  #result{font-size:16px}
+  #result .rn{font-size:22px}
+  .coll{gap:8px}
+  .ccard{min-height:0;padding:10px 8px;border-width:2px}
+  .ccard .e{font-size:38px}
+  .ccard .nm{font-size:18px}
+  .ccard .rar{font-size:10px;margin:2px 0 4px}
+  .ccard .d{font-size:12px;line-height:1.35}
+  .ccard.locked .d{display:none}
+  .coll-title h3{font-size:28px}
+  .charges li{font-size:16px}
+  .stat{padding:16px}
+  .stat .n{font-size:42px}
+  .gift{min-height:0}
+  #mute{width:44px;height:44px;font-size:20px;right:10px;bottom:10px}
+  .ov-box .e{font-size:80px}
+  #golden .content{padding-bottom:22px}
 }
 @media (max-width:480px){
   .stats{grid-template-columns:1fr}
